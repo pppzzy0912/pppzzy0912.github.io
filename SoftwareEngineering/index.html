@@ -1,0 +1,598 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>软件工程期末复习 | PPPzzY</title><meta name="description" content="软件工程期末复习"><meta name="keywords" content="学校课程,期末复习"><meta name="author" content="PPPzzY"><meta name="copyright" content="PPPzzY"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="软件工程期末复习"><meta name="twitter:description" content="软件工程期末复习"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="软件工程期末复习"><meta property="og:url" content="http://yoursite.com/SoftwareEngineering/"><meta property="og:site_name" content="PPPzzY"><meta property="og:description" content="软件工程期末复习"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/SoftwareEngineering/"><link rel="next" title="python期末复习部分习题" href="http://yoursite.com/python-ex1/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章：软件工程学概述"><span class="toc-number">1.</span> <span class="toc-text">第一章：软件工程学概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章：可行性研究"><span class="toc-number">2.</span> <span class="toc-text">第二章：可行性研究</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三章：需求分析"><span class="toc-number">3.</span> <span class="toc-text">第三章：需求分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五章：总体设计"><span class="toc-number">4.</span> <span class="toc-text">第五章：总体设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第六章：详细设计"><span class="toc-number">5.</span> <span class="toc-text">第六章：详细设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第七章：实现"><span class="toc-number">6.</span> <span class="toc-text">第七章：实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第八章：维护"><span class="toc-number">7.</span> <span class="toc-text">第八章：维护</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第九章：面向对象方法学引论"><span class="toc-number">8.</span> <span class="toc-text">第九章：面向对象方法学引论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十三章：软件项目管理"><span class="toc-number">9.</span> <span class="toc-text">第十三章：软件项目管理</span></a></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">PPPzzY</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">软件工程期末复习</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date" title="Created 2020-12-17 15:39:36"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2020-12-17</time></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>Word count:</span><span class="word-count">4.1k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>Reading time: 12 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>仅供期末复习准备考试参考</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选择</th>
+<th style="text-align:center">填空</th>
+<th style="text-align:center">名词解释</th>
+<th style="text-align:center">大题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">10题</td>
+<td style="text-align:center">12题</td>
+<td style="text-align:center">2题</td>
+<td style="text-align:center">2题</td>
+</tr>
+<tr>
+<td style="text-align:center">10分</td>
+<td style="text-align:center">12分</td>
+<td style="text-align:center">8分</td>
+<td style="text-align:center">70分</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="第一章：软件工程学概述"><a href="#第一章：软件工程学概述" class="headerlink" title="第一章：软件工程学概述"></a>第一章：软件工程学概述</h1><ol>
+<li><p>产生软件危机的原因</p>
+<ol>
+<li>对用户要求没有完整准确的认识就匆忙着手编写程序</li>
+<li>没有认识到程序只是完整的软件产品的一个组成部分</li>
+</ol>
+</li>
+<li><p>软件工程方法学</p>
+<ul>
+<li>定义：在软件生命周期全过程中使用的一整套技术的集合</li>
+<li>要素：方法、工具、过程</li>
+</ul>
+</li>
+<li><p>软件生命周期</p>
+<ol>
+<li>软件定义<ol>
+<li>问题定义：这是软件生存周期的第一个阶段，主要任务是弄i清用户要计算机解决的问题是什么</li>
+<li>可行性研究：任务是为前一阶段提出的问题寻求一种至数种在技术上可行、且在经济上有较高效益的解决方案</li>
+</ol>
+</li>
+<li>软件开发<ul>
+<li>需求分析、总体设计（概要设计）、详细设计、编码和单元测试、综合测试</li>
+</ul>
+</li>
+<li>软件维护</li>
+</ol>
+</li>
+<li><p>瀑布模型（了解</p>
+<blockquote>
+<ol>
+<li>特点：<ol>
+<li>阶段间具有顺序性和依赖性</li>
+<li>推迟实现的观点：在编码之前设置了系统分析与系统设计阶段</li>
+<li>质量保证的观点：每个阶段都必须完成规定的文档，结束前都要对所完成的文档进行评审</li>
+</ol>
+</li>
+<li>实际的瀑布模型带“反馈环”</li>
+<li>是一种文档驱动的模型</li>
+</ol>
+</blockquote>
+</li>
+<li><p>快速原型模型（了解</p>
+<blockquote>
+<ol>
+<li>定义：是快速建立起来的可以在计算机上运行的程序，它所能完成的功能往往是最终产品能完成的功能的一个子集</li>
+<li>差别：<ul>
+<li>瀑布模型带反馈环，快速原型模型不带反馈环</li>
+<li>瀑布模型第一步“需求分析”，快速原型第一步“快速原型”</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h1 id="第二章：可行性研究"><a href="#第二章：可行性研究" class="headerlink" title="第二章：可行性研究"></a>第二章：可行性研究</h1><ol>
+<li>问题定义<ol>
+<li>内容：<ol>
+<li>明确问题的背景、开发系统的现状、开发的理由和条件</li>
+<li>开发系统的问题要求、总体要求、问题的性质、类型、范围、要实现的目标</li>
+<li>功能规模、实现目标的方案、开发的条件、环境要求等等</li>
+<li>写出问题定义报告（或称系统定义报告），以供可行性分析阶段使用</li>
+</ol>
+</li>
+<li>步骤：<ol>
+<li>系统分析员要深入现场</li>
+<li>阅读用户写的书面报告</li>
+<li>听取用户对开发系统的要求</li>
+<li>调查开发系统的背景理由</li>
+<li>与用户负责人反复讨论，以澄清模糊的地方、改正不正确的地方</li>
+<li>写出双方都满意的问题定义报告，并确定双方是否可进行深入系统可行性研究的意向</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>可行性研究<ol>
+<li>研究方面：<ul>
+<li>技术可行性</li>
+<li>经济可行性</li>
+<li>操作可行性</li>
+<li>社会和法律可行性</li>
+</ul>
+</li>
+<li>步骤</li>
+</ol>
+</li>
+<li>成本效益分析<ol>
+<li>目的：从经济角度评价开发一个新项目是否可行、是否划算，从而帮助使用部门的负责人正确地作出是否投资于这项开发的决定</li>
+<li>成本估计<ol>
+<li>代码行技术</li>
+<li>任务分解技术</li>
+<li>自动估计成本技术</li>
+</ol>
+</li>
+<li>方法<ol>
+<li>货币的时间价值：F = P × (1+i)^n</li>
+<li>投资回收期：使累计的经济效益等于最初投资所需要的时间。</li>
+<li>纯收入：在整个生命周期之内系统累计经济效益（折合成现在值）与投资之差。</li>
+<li>投资回收率：收益/成本</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>数据流图</strong>【<ol>
+<li>看链接吧烦了：<a href="https://www.visual-paradigm.com/cn/guide/data-flow-diagram/what-is-data-flow-diagram/" target="_blank" rel="noopener">https://www.visual-paradigm.com/cn/guide/data-flow-diagram/what-is-data-flow-diagram/</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="第三章：需求分析"><a href="#第三章：需求分析" class="headerlink" title="第三章：需求分析"></a>第三章：需求分析</h1><ol>
+<li><p>需求分析的任务、方法</p>
+<ol>
+<li><p>任务：</p>
+<ol>
+<li><p>确定对系统的综合要求</p>
+<blockquote>
+<p>功能需求、性能需求、可靠性和可用性需求、出错处理需求、接口需求、约束、逆向需求、将来可能提出的要求</p>
+</blockquote>
+</li>
+<li><p>分析系统的数据要求</p>
+<blockquote>
+<p>数据结构表示数据元素之间的逻辑关系</p>
+<p>利用数据字典可以全面准确地定义数据</p>
+<p>辅助描绘数据结构工具：层次方框图、Warnier图</p>
+</blockquote>
+</li>
+<li><p>导出系统的逻辑模型</p>
+<blockquote>
+<p>综合上述两项分析的结果导出系统逻辑模型、数据流图、实体-联系图、状态转换图、数据字典和主要的处理算法描述这个逻辑模型</p>
+</blockquote>
+</li>
+<li><p>修正系统开发计划</p>
+</li>
+</ol>
+</li>
+<li><p>与用户沟通获取需求的方法</p>
+<ol>
+<li><p>访谈</p>
+<blockquote>
+<p>基本形式：非正式的访谈、正式的访谈</p>
+<p>情景分析技术</p>
+</blockquote>
+</li>
+<li><p>面向数据流自顶向下求精</p>
+<blockquote>
+<ol>
+<li>采用结构化分析方法：就是面向数据流自顶向下、逐步求精进行需求分析的方法。</li>
+<li>目标：细化数据流图，把数据流和数据存储定义到元素级。</li>
+<li>建立功能模型、行为模型、数据模型，并采用层次化的方法进行描述。</li>
+</ol>
+</blockquote>
+</li>
+<li><p>简易的应用规格说明技术</p>
+<blockquote>
+<ol>
+<li>初步访谈，确定待解决问题的范围和解决方案，写出“产品需求”。</li>
+<li>初步确定系统组成，列出系统的各种对象和环境。</li>
+<li>初步确定系统功能，列出对象的操作和服务(即处理或功能)。</li>
+<li>列出约束条件(成本、规模、完成日期等)和性能标准(速度、容量等)</li>
+</ol>
+</blockquote>
+</li>
+<li><p>快速建立软件原型</p>
+<blockquote>
+<p>快速建立起来的旨在演示目标系统主要功能的可运行的程序。</p>
+<p>要点，只实现用户看得见的功能，例如屏幕显示或打印报表。</p>
+<p>特性1：“快速”；   特性2：“容易修改”。</p>
+<p>利用先进方法和工具：</p>
+<ol>
+<li>第四代技术：系统生成器。</li>
+<li>可重用的软件构件：用一组已有的软件构件(也称组件)来装配。<ul>
+<li>构件可是数据结构(数据库)、软件体系结构构件(程序)、过程构件(模块)</li>
+</ul>
+</li>
+<li>(3) 形式化规格说明和原型环境</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>状态转换图</p>
+<ul>
+<li>通过描绘系统的状态及引起系统状态转换的事件，来表示系统的行为。</li>
+<li>状态：<ul>
+<li>初态：实心圆</li>
+<li>中间状态：上（状态名称，必须）、中（状态变量的名字和值，可选）、下（活动表，可选）</li>
+<li>终态：一对同心圆（内部为实心圆）</li>
+</ul>
+</li>
+<li>事件</li>
+</ul>
+</li>
+</ol>
+<h1 id="第五章：总体设计"><a href="#第五章：总体设计" class="headerlink" title="第五章：总体设计"></a>第五章：总体设计</h1><ol>
+<li><p>模块独立</p>
+<ol>
+<li><p>模块：由边界元素限定的相邻程序元素（例如：数据说明、可执行的语句）的序列，而且有一个总体标识符代表它。</p>
+<blockquote>
+<ul>
+<li>功能：描述该模块实现什么功能</li>
+<li>逻辑：描述模块内部怎么做</li>
+<li>状态：该模块使用时的环境和条件</li>
+</ul>
+</blockquote>
+</li>
+<li><p>模块化：把程序划分成独立命名且可独立访问的模块，每个模块完成一个子功能把这些模块集成起来构成一个整体，可以完成指定的功能满足用户的需求。</p>
+</li>
+<li><p>模块化设计：把大型软件按照规定的原则划分为一个个较小的、相对独立但又相关的模块的设计方法，叫做模块化设计（modular design）。</p>
+</li>
+<li><p>耦合：对一个软件结构内不同模块之间互连程度的度量。</p>
+<blockquote>
+<ol>
+<li>非直接耦合</li>
+<li>数据耦合（低耦合且必须存在）</li>
+<li>控制耦合</li>
+<li>特征耦合</li>
+<li>公共环境耦合</li>
+<li>内容耦合</li>
+</ol>
+</blockquote>
+</li>
+<li><p>内聚：一个模块内部各个元素彼此结合的紧密程度，是信息隐藏和局部化概念的自然扩展。</p>
+<blockquote>
+<ol>
+<li>功能内聚</li>
+<li>顺序内聚</li>
+<li>通信内聚</li>
+<li>过程内聚</li>
+<li>时间内聚</li>
+<li>逻辑内聚</li>
+<li>偶然内聚</li>
+</ol>
+</blockquote>
+</li>
+<li><p>模块独立性强：高内聚、低耦合</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="第六章：详细设计"><a href="#第六章：详细设计" class="headerlink" title="第六章：详细设计"></a>第六章：详细设计</h1><ol>
+<li><p>详细设计</p>
+<ol>
+<li>从工程管理的角度来看，软件设计分两步完成：<ol>
+<li>概要设计：将软件需求转化为数据结构和软件的系统结构。</li>
+<li>详细设计：即过程设计。通过对结构表示进行细化，得到软件的详细的数据结构和算法。</li>
+</ol>
+</li>
+<li>任务：<ol>
+<li>确定每个模块的算法</li>
+<li>确定每一个模块的数据组织</li>
+<li>为每个模块设计一组测试用例</li>
+<li>编写详细设计说明书</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>基本控制结构</p>
+<ol>
+<li>顺序</li>
+<li>选择</li>
+<li>循环</li>
+</ol>
+</li>
+<li><p>人机界面设计、操作</p>
+<ol>
+<li>设计问题<ol>
+<li>系统响应时间</li>
+<li>用户帮助设施</li>
+<li>出错信息处理</li>
+<li>命令交互</li>
+</ol>
+</li>
+<li>设计过程<ul>
+<li>用户界面设计是一个迭代的过程，也就是说，通常先创建设计模型，再用原型实现这个设计模型，并由用户试用和评估，然后根据用户意见进行修改。</li>
+</ul>
+</li>
+<li>设计指南<ol>
+<li>一般交互指南</li>
+<li>信息显示指南</li>
+<li>数据输入指南</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>程序流程图、盒图、PAD图</strong>【</p>
+<ol>
+<li>看链接吧烦了：<a href="https://www.jianshu.com/p/4a339e558b5f" target="_blank" rel="noopener">https://www.jianshu.com/p/4a339e558b5f</a></li>
+</ol>
+</li>
+<li><p>复杂度—流图</p>
+<ol>
+<li><blockquote>
+<p>定量度量程序复杂度的价值：</p>
+<ol>
+<li>把程序的复杂程度乘以适当常数即可估算出软件中错误的数量以及软件开发需要用到的工作量</li>
+<li>定量度量的结果可以用来比较两个不同的设计或两个不同算法的优劣</li>
+<li>程序的定量的复杂程度可以作为模块规模的精确限量</li>
+</ol>
+</blockquote>
+</li>
+<li><p>看链接吧烦了：<a href="https://blog.csdn.net/spring_willow/article/details/70814214" target="_blank" rel="noopener">https://blog.csdn.net/spring_willow/article/details/70814214</a></p>
+</li>
+</ol>
+</li>
+<li><p><strong>计算环形复杂度</strong>【</p>
+<ul>
+<li><strong>V(G)=E-N+2</strong>：E是流图中边的条数，N是结点数。</li>
+<li><strong>V(G)=P+1</strong>：P是流图中判定结点的数目。</li>
+</ul>
+</li>
+</ol>
+<h1 id="第七章：实现"><a href="#第七章：实现" class="headerlink" title="第七章：实现"></a>第七章：实现</h1><ol>
+<li>黑盒、白盒测试<ul>
+<li>黑盒测试：完全不考虑程序内部的结构和处理过程，只按照规格说明书的规定来检查程序是否符合它的功能要求。是在程序接口进行的测试，又称功能测试。</li>
+<li>白盒测试：测试人员完全了解程序的内部结构和处理过程。测试时按照程序内部的逻辑测试程序、检验程序中的每条通路是否都能按预定的要求正确工作。又称结构测试。</li>
+</ul>
+</li>
+<li>等价类划分<ul>
+<li>思路：将程序输入域划分成若干个部分，即子集，然后从每个子集中选取具有代表性的数据作为测试用例。</li>
+<li>等价类的划分在很大程度上依靠的是测试人员的经验，下面给出几条基本原则：<ol>
+<li>输入条件的取值范围</li>
+<li>输入数据的个数限定</li>
+<li>相同处理的一组输入</li>
+<li>无效的等价类</li>
+<li>空值检查</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>边界值分析<ul>
+<li>选取恰好等于、小于和大于边界的值作为测试数据，而不是选取每个等价类内的典型值或任意值作为测试数据。</li>
+</ul>
+</li>
+</ol>
+<h1 id="第八章：维护"><a href="#第八章：维护" class="headerlink" title="第八章：维护"></a>第八章：维护</h1><ol>
+<li>软件可维护性<ol>
+<li>定义：维护人员理解、改正、改动或改进这个软件的难易程度。</li>
+<li>决定软件可维护性的因素：<ul>
+<li>可理解性</li>
+<li>可测试性</li>
+<li>可修改性</li>
+<li>可移植性</li>
+<li>可重用性</li>
+</ul>
+</li>
+<li>提高方法：<ol>
+<li>建立明确的软件质量标准</li>
+<li>利用先进的软件技术和工具</li>
+<li>建立明确的质量保证制度</li>
+<li>选择可维护的程序设计语言</li>
+<li>改进软件的文档</li>
+</ol>
+</li>
+<li>文档（影响软件可维护性的决定因素）：<ol>
+<li>用户文档</li>
+<li>系统文档</li>
+</ol>
+</li>
+<li>可维护性复审<ul>
+<li>是提高软件可维护性的重要保证</li>
+<li>从容易修改、模块化和功能独立的目标出发，评价软件的结构和过程；设计中应该对将来可能修改的部分预作准备。</li>
+<li>应该强调编码风格和内部说明文档这两个影响可维护性的因素</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="第九章：面向对象方法学引论"><a href="#第九章：面向对象方法学引论" class="headerlink" title="第九章：面向对象方法学引论"></a>第九章：面向对象方法学引论</h1><ol>
+<li>三种模型及其关系<ul>
+<li>对象模型<ul>
+<li>表示静态的、结构化的系统的“数据”性质。它是对模拟客观世界实体的对象以及对象彼此间的关系的映射，描述了系统的静态结构。</li>
+<li>通常使用UML提供的类图来建立对象模型</li>
+</ul>
+</li>
+<li>动态模型<ul>
+<li>表示瞬时的、行为化的系统的“控制”性质，它规定了对象模型中的对象的合法变化序列。</li>
+<li>通常用UML中的状态图来描绘对象的状态、触发状态转换的事件以及对象的行为（对事件的响应）</li>
+<li>基于事件共享而互相关联的一组状态图的集合</li>
+</ul>
+</li>
+<li>功能模型<ul>
+<li>表示变化的系统的“功能”性质，它指明了系统应该“做什么”，因此更直接地反映了用户对目标系统的需求</li>
+<li>通常由一组数据流图组成</li>
+</ul>
+</li>
+<li>关系<ol>
+<li>针对每个类建立的动态模型，描述了类实例的生命周期或运行周期</li>
+<li>状态转换驱使行为发生，这些行为在数据流图中被映射成处理，在用例图中被映射成用例，它们同时与类图中的服务相对应</li>
+<li>功能模型中的处理（或用例）对应于对象模型中的类所提供的服务</li>
+<li>数据流图中的数据存储，以及数据的源点/终点，通常是对象模型中的对象</li>
+<li>用例中的行为者，可能是对象模型中的对象</li>
+<li>功能模型中的处理（或用例）可能产生动态模型中的事件</li>
+<li>对象模型描述了数据流图中的数据流、数据存储以及数据源点/终点的结构</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="第十三章：软件项目管理"><a href="#第十三章：软件项目管理" class="headerlink" title="第十三章：软件项目管理"></a>第十三章：软件项目管理</h1><ol>
+<li><p>功能点技术—信息域特性</p>
+<ul>
+<li><p>功能点技术依据对软件信息域特性和软件复杂性的评估结果，估算软件规模。用功能点（FP）为单位度量软件规模。</p>
+</li>
+<li><p>信息域五个特性：</p>
+<ol>
+<li>输入项数</li>
+<li>输出项数</li>
+<li>查询数</li>
+<li>主文件数</li>
+<li>外部接口数</li>
+</ol>
+</li>
+<li><p>估算步骤：</p>
+<blockquote>
+<ol>
+<li>计算未调整的功能点数UFP<ul>
+<li>UFP=a1×Inp+a2×Out+a3×Inq+a4×Maf+a5×Inf</li>
+</ul>
+</li>
+<li>计算技术复杂性因子TCF<ul>
+<li>TCF=0.65+0.01×DI</li>
+</ul>
+</li>
+<li>计算功能点数FP<ul>
+<li>FP = UFP × TCF</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>能力成熟度模型CMM</p>
+<ol>
+<li><p>初始级</p>
+<blockquote>
+<ul>
+<li>软件过程的特征是无序的，有时甚至是混乱的。几乎没有什么过程是经过定义的（即没有一个定型的过程模型），项目能否成功完全取决于开发人员的个人能力。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>可重复级</p>
+<blockquote>
+<ul>
+<li>软件机构建立了基本的项目管理过程(过程模型),可跟踪成本、进度、功能和质量。</li>
+<li>已经建立起必要的过程规范，对新项目的策划和管理过程是基于以前类似项目的实践经验，使得有类似应用经验的软件项目能够再次取得成功。</li>
+<li>达到2级的一个目标是使项目管理过程稳定，从而使得软件机构能重复以前在成功项目中所进行过的软件项目工程实践。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>已定义级</p>
+<blockquote>
+<ul>
+<li>软件机构已经定义了完整的软件过程（过程模型），软件过程已经文档化和标准化。</li>
+<li>所有项目组都使用文档化的、经过批准的过程来开发和维护软件。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>已管理级</p>
+<blockquote>
+<ul>
+<li>软件机构对软件过程（过程模型和过程实例）和软件产品都建立了定量的质量目标，所有项目的重要的过程活动都是可度量的。</li>
+<li>该软件机构收集了过程度量和产品度量的方法并加以运用，可以定量地了解和控制软件过程和软件产品，并为评定项目的过程质量和产品质量奠定了基础。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>优化级</p>
+<blockquote>
+<ul>
+<li>软件机构集中精力持续不断地改进软件过程。这一级的软件机构是一个以防止出现缺陷为目标的机构，它有能力识别软件过程要素的薄弱环节，并有足够的手段改进它们。</li>
+<li>在这样的机构中，可以获得关于软件过程有效性的统计数据，利用这些数据可以对新技术进行成本/效益分析，并可以优化出在软件工程实践中能够采用的最佳新技术。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>UML用例图【重点</li>
+<li>顺序图、时序图（看图描述</li>
+<li>状态图（有哪些状态</li>
+<li>类图（属性、方法、结合时序图</li>
+<li>DFD</li>
+<li>环行复杂度</li>
+<li>基本程序路径</li>
+<li>测试用例</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">PPPzzY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/SoftwareEngineering/">http://yoursite.com/SoftwareEngineering/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/">学校课程</a><a class="post-meta__tags" href="/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">期末复习</a></div><div class="post_share"><div class="social-share" data-image="/img/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/python-ex1/"><img class="next_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">python期末复习部分习题</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/ReviewExercises-DS/" title="期末复习之数算习题"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-30</div><div class="relatedPosts_title">期末复习之数算习题</div></div></a></div><div class="relatedPosts_item"><a href="/python-ex1/" title="python期末复习部分习题"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-12-14</div><div class="relatedPosts_title">python期末复习部分习题</div></div></a></div><div class="relatedPosts_item"><a href="/DS-Graph/" title="数据结构——图"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-14</div><div class="relatedPosts_title">数据结构——图</div></div></a></div><div class="relatedPosts_item"><a href="/DS-LinearStructure/" title="数据结构——线性结构"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-07</div><div class="relatedPosts_title">数据结构——线性结构</div></div></a></div><div class="relatedPosts_item"><a href="/DS-Tree/" title="数据结构——树"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-24</div><div class="relatedPosts_title">数据结构——树</div></div></a></div><div class="relatedPosts_item"><a href="/DatabaseFoundation/" title="数据库基础"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-18</div><div class="relatedPosts_title">数据库基础</div></div></a></div></div><div class="clear_both"></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By PPPzzY</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
